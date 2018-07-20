@@ -57,12 +57,21 @@ public String secondMove( ){
 	
 	Scanner newmove = new Scanner(System.in);
 	String nextmove = newmove.nextLine();
-	
-	if ( nextmove.equals("east")) {
+	this.secondmove = nextmove;
+	if ( nextmove.equals("east") && firstmove.equals("east")) {
 		return "The dial now reads 4 meters";
 	}
 	else if (nextmove.equals("west")) {
 		return "The dial now reads 6.5 meters";
+	}
+	else if(nextmove.equals("south")) {
+		
+	}
+	else if(nextmove.equals("north")) {
+		
+	}
+	else {
+		return "wrong";
 	}
 	return nextmove;
 }
