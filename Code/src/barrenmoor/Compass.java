@@ -8,7 +8,18 @@ String  south;
 String  east;
 String  west;
 
-int meters; 
+String firstmove;
+String secondmove;
+String thirdmove;
+String fourthmove;
+String fifthmove;
+
+int meters;
+
+
+public void moves(String firstmove, String secondmove, String thirdmove, String fourthmove, String fifthmove) {
+	
+}
 
 public void UserDirections(String north, String south, String east, String west) {
 	this.north = north;
@@ -22,9 +33,10 @@ public String firstMove() {
 	
 	Scanner move = new Scanner(System.in);
 	String firstmove = move.nextLine();
+	this.firstmove = firstmove;
+	
 	if(firstmove.equals("east")) {
 	
-	String FirstMove = firstmove;
 	return "The dial now reads 4.5 meters";
 	
 	}
@@ -41,7 +53,7 @@ public String firstMove() {
 	return "Enter your next move" ;
 }
 
-public String secondMove( ) {
+public String secondMove( ){
 	
 	Scanner newmove = new Scanner(System.in);
 	String nextmove = newmove.nextLine();
@@ -49,7 +61,10 @@ public String secondMove( ) {
 	if ( nextmove.equals("east")) {
 		return "The dial now reads 4 meters";
 	}
-	return "wrong";
+	else if (nextmove.equals("west")) {
+		return "The dial now reads 6.5 meters";
+	}
+	return nextmove;
 }
 
 
